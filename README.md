@@ -9,4 +9,4 @@ This python file can be used to extract rental home data from Kijiji.ca from you
         
         URL= "https://www.kijiji.ca/b-for-rent/mississauga-peel-region/page-{}/c30349001l1700276?radius=9.0&address=2585+Meadowpine+Boulevard%2C+Mississauga%2C+ON&ll=43.602075,-79.779412".format(start)
 
-**3.** The outpur excel file with header Title,Price, Km distance and Link will be genrated which can be used to find the required rental home.
+**3.** The output excel file with header Title,Price, Km distance and Link will be genrated which can be used to find the required rental home.
