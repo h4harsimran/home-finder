@@ -1,23 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Nov  1 20:41:18 2021
-
-@author: harsi
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Nov  1 19:09:51 2021
-
-@author: harsi
-"""
-
 import requests
 from IPython.display import display
 from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
-#%%
+
 #%%%
 st_var=np.linspace(1,99,100,dtype=int)
 arr=np.zeros((19000,4),dtype='str')
@@ -40,16 +26,9 @@ for k in st_var:
         ad_tit=ad_elems[i].find('a', class_='title')
         ad_link=str('https://www.kijiji.ca'+ ad_elems[i].find('a', href=True)['href'])
         at=str(ad_tit.text)[29:].split('\n')[0]
-        #if ad_mil==None:
-        #    am=0
-        #else:
-         #   am=str(ad_mil.text)[9:]
-          #  kloc=am.find('km')
-           # am=am[0:kloc-1]
         am=str(ad_mil.text).split('\n')[4][34:-3]
         ap=str(ad_price.text)[187:].split('\n')[0]
         al=ad_link
-       # df2={'Title':at,'Price':ap,'kms':am,'link':al}
         df.loc[df.shape[0]]=[at,ap,am,al]
     
     
